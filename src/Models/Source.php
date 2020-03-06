@@ -2,7 +2,7 @@
 
 namespace Luigel\LaravelPaymongo\Models;
 
-class Source 
+class Source
 {
     public $id;
     public $type;
@@ -19,10 +19,10 @@ class Source
         $this->type = $data['type'];
         $this->currency = $data['attributes']['currency'];
         $this->status = $data['attributes']['status'];
-        $this->amount = number_format($data['attributes']['amount'] / 100, 2);
+        $this->amount = round($data['attributes']['amount'] / 100, 2);
         $this->redirect = $data['attributes']['redirect'];
         $this->source_type = $data['attributes']['type'];
-        $this->created = $data['attributes']['created'];
+        $this->created = $data['attributes']['created_at'];
 
         return $this;
     }

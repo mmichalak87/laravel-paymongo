@@ -17,7 +17,7 @@ trait Request
 
     /**
      * Request a create to API
-     * 
+     *
      * @param array $payload
      * @return Model
      */
@@ -29,7 +29,7 @@ trait Request
 
         $this->setOptions([
             'headers' => [
-                'Accept' => 'application/json', 
+                'Accept' => 'application/json',
                 'Content-type' => 'application/json'
             ],
             'auth' => [config('paymongo.secret_key'), ''],
@@ -41,7 +41,7 @@ trait Request
 
     /**
      * Request a create to API
-     * 
+     *
      * @param array $payload
      * @return Model
      */
@@ -125,16 +125,16 @@ trait Request
         return $this->request();
     }
 
-    /** 
-     * Send request to API 
-     * 
+    /**
+     * Send request to API
+     *
      * @return mixed|Throwable
      */
     protected function request()
     {
         $client = new Client();
 
-        try 
+        try
         {
             $response = $client->request($this->method, $this->apiUrl, $this->options);
 
@@ -158,8 +158,8 @@ trait Request
             }
         }
 
-        
-        
+
+
     }
 
     protected function formRequestData()
@@ -188,11 +188,10 @@ trait Request
 
     protected function convertPayloadAmountsToInteger($payload)
     {
-        if (isset($payload['amount']))
-        {
+        if (is_array($payload) && isset($payload['amount'])) {
             $payload['amount'] *= 100;
         }
         return $payload;
-        
+
     }
 }

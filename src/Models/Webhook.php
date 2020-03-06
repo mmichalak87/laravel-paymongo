@@ -4,7 +4,7 @@ namespace Luigel\LaravelPaymongo\Models;
 
 use Luigel\LaravelPaymongo\Paymongo;
 
-class Webhook 
+class Webhook
 {
     public const SOURCE_CHARGEABLE = 'source.chargeable';
 
@@ -39,8 +39,8 @@ class Webhook
         $this->secret_key = $data['attributes']['secret_key'];
         $this->status = $data['attributes']['status'];
         $this->url = $data['attributes']['url'];
-        $this->updated = $data['attributes']['updated'];
-        $this->created = $data['attributes']['created'];
+        $this->updated = $data['attributes']['updated_at'];
+        $this->created = $data['attributes']['created_at'];
 
         $events = collect();
         foreach ($data['attributes']['events'] as $event)
