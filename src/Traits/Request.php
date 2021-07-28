@@ -189,7 +189,7 @@ trait Request
     protected function convertPayloadAmountsToInteger($payload)
     {
         if (is_array($payload) && isset($payload['amount'])) {
-            $payload['amount'] *= 100;
+            $payload['amount'] = (int) number_format(($payload['amount'] * 100), 0, '', '');
         }
         return $payload;
 
