@@ -7,6 +7,10 @@ use Luigel\LaravelPaymongo\Paymongo as PaymongoFacade;
 
 /**
  * @see \Luigel\LaravelPaymongo\Skeleton\SkeletonClass
+ * @method static Paymongo token()
+ * @method static Paymongo payment()
+ * @method static Paymongo source()
+ * @method static Paymongo webhook()
  */
 class Paymongo extends Facade
 {
