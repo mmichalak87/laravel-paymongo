@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "guzzlehttp/guzzle": "^6.5|7.x",
-        "laravel/framework": "10.x",
+        "laravel/framework": "10.x"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
