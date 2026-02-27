@@ -1,11 +1,11 @@
 {
-    "name": "mmichalak87/laravel-paymongo",
+    "name": "luigel/laravel-paymongo",
     "description": "A laravel wrapper for Paymongo API",
     "keywords": [
         "luigel",
         "laravel-paymongo"
     ],
-    "homepage": "https://github.com/luigel/laravel-paymongo",
+    "homepage": "https://github.com/mmichalak87/laravel-paymongo",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,28 +16,27 @@
         }
     ],
     "require": {
-        "php": "^7.2 || ^8.0",
-        "guzzlehttp/guzzle": "^6.5|7.x",
-        "laravel/framework": "10.x"
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^10.0|^11.0|^12.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
-            "Luigel\\LaravelPaymongo\\": "src"
+            "Luigel\\Paymongo\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Luigel\\LaravelPaymongo\\Tests\\": "tests"
+            "Luigel\\Paymongo\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -45,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Luigel\\LaravelPaymongo\\LaravelPaymongoServiceProvider"
+                "Luigel\\Paymongo\\LaravelPaymongoServiceProvider"
             ],
             "aliases": {
-                "Paymongo": "Luigel\\LaravelPaymongo\\Facades\\PaymongoFacade"
+                "Paymongo": "Luigel\\Paymongo\\Facades\\Paymongo"
             }
         }
     }

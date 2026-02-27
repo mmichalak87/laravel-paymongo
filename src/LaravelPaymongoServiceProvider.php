@@ -1,6 +1,6 @@
 <?php
 
-namespace Luigel\LaravelPaymongo;
+namespace Luigel\Paymongo;
 
 use Illuminate\Support\ServiceProvider;
 

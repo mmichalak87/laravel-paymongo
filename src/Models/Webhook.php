@@ -1,8 +1,8 @@
 <?php
 
-namespace Luigel\LaravelPaymongo\Models;
+namespace Luigel\Paymongo\Models;
 
-use Luigel\LaravelPaymongo\Paymongo;
+use Luigel\Paymongo\Paymongo;
 
 class Webhook
 {

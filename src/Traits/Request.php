@@ -1,14 +1,14 @@
 <?php
 
-namespace Luigel\LaravelPaymongo\Traits;
+namespace Luigel\Paymongo\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Database\Eloquent\Model;
-use Luigel\LaravelPaymongo\Exceptions\BadRequestException;
-use Luigel\LaravelPaymongo\Exceptions\NotFoundException;
-use Luigel\LaravelPaymongo\Exceptions\PaymentErrorException;
-use Luigel\LaravelPaymongo\Models\Webhook;
+use Luigel\Paymongo\Exceptions\BadRequestException;
+use Luigel\Paymongo\Exceptions\NotFoundException;
+use Luigel\Paymongo\Exceptions\PaymentErrorException;
+use Luigel\Paymongo\Models\Webhook;
 
 trait Request
 {
@@ -156,10 +156,8 @@ trait Request
             {
                 throw new NotFoundException($response['errors'][0]['detail']);
             }
+            throw $e;
         }
-
-
-
     }
 
     protected function formRequestData()
